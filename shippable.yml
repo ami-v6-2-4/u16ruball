@@ -1,6 +1,5 @@
 language: ruby
 
-# Version number
 rvm:
   - 2.2.9
   - 2.3.6
@@ -10,6 +9,10 @@ rvm:
   - "jruby-9.1.15"  
   
 build:
+  pre_ci_boot:
+    image_name: drydock/u16ruball
+    image_tag: v6.2.4
+    pull: true
     
   ci:
     - ruby -v   
